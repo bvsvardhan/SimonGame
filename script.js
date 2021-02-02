@@ -13,6 +13,16 @@ $(document).keydown(function(){
   }
 });
 
+$(document).ontouchend(function(){
+  if(!started){
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
+
+
+
 
 $(".btn").click(function(){
   var userChosenColour=$(this).attr("id");
